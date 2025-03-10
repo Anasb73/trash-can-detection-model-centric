@@ -55,7 +55,7 @@ def preprocess_image_and_boxes(img_path, image_info, annotations, category_to_su
         return None, None, None
 
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    img = cv2.resize(img, (224, 224))  
+    img = cv2.resize(img, (128, 128))  
 
     img_anns = [ann for ann in annotations if ann['image_id'] == image_info['id']]
     boxes = []
